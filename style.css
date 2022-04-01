@@ -73,6 +73,8 @@ nav > a:hover {
 .para-text-box {
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* for JS */
+    display: none;
 }
 
 .para-text-box > hr {
@@ -92,12 +94,14 @@ nav > a:hover {
     filter: drop-shadow(2px 2px 4px black);
     position: absolute;
     z-index: 1;
-    transition: transform 200ms;
+    transition: 200ms ease-in-out, transform 200ms ease-out;
 }
 
 .para-image > img:hover {
     cursor: pointer;
-    transform: scale(110%);
+    /* Cant use transform - because JS */
+    width: 12vw;
+    margin-left: -1vw;
 }
 
 
