@@ -41,22 +41,24 @@ function parallaxActive(target) {
 
     setTimeout(() => {
       image.style.width = '20vw';
+      image.style.transform = '';
       // disabling CSS
       image.style.margin = '0';
-
+      
       let text = document.querySelector(`#${target} .para-text-box`);
       text.style.display = 'block';
-
+      
       container.style.display = 'flex';
       container.style.top = '50%';
       container.style.left = '50%';
       container.style.transform = 'translate(-50%, -50%)'
-
+      
       setTimeout(() => {
         container.style.opacity = '1';
         setTimeout(() => {
           // wait for activeOff()
           parallaxLock = 2;
+          // refers to below - above activeOff()
           activeOffTarget = target;
         }, 200);
       }, 200);
