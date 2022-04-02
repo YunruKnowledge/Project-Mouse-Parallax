@@ -99,11 +99,10 @@ function activeOff() {
         allContainer[i].style.display = 'flex';
         setTimeout(() => {  
           allContainer[i].style.opacity = '1';
+          parallaxLock = 0;
         }, 200);
       }
     }, 200);
-
-    parallaxLock = 0;
   }
 }
 
